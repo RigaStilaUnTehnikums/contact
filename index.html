@@ -45,7 +45,7 @@
             margin: 0; 
             font-size: 1.5rem;
         }
-        #homebtn, #languagebtn, #loginbtn {
+        #homebtn, #loginbtn {
             border-style: solid;
             height: 6.8vh;
             width: 6.4vw;
@@ -63,7 +63,7 @@
             background-color: white;
             transition: 0.2s;
         }
-        #homebtn:hover, #languagebtn:hover, #loginbtn:hover, #substitution:hover, #timetable:hover {
+        #homebtn:hover,#loginbtn:hover, #substitution:hover, #timetable:hover {
             cursor: pointer;
             border-color: red;
             color: white;
@@ -72,9 +72,9 @@
         #lower {
             display: flex;
             flex-direction: column;
-            align-items: center; 
-            height: auto; 
-            width: 91vw;
+            align-items: start; 
+            height: 50%; 
+            width: 95vw;
             max-width: 100%; 
             margin: 0 auto;
             background-color: transparent;
@@ -84,91 +84,6 @@
             margin-top: 50px;
             padding-bottom: 50px;
             border-radius: 10px;
-        }
-        .content-row {
-            display: flex;
-            justify-content: flex-start; 
-            align-items: flex-start;
-            width: 100%;
-            margin-bottom: 20px;
-        }
-        #navigation {
-            background-color: white;
-            height: 60.5vh;
-            width: 23vw;
-            max-width: 23.1%;
-            margin-left: 20px;
-            margin-top: 20px;
-            border-radius: 6px;
-        }
-        #youtubevideo {
-            width: 49.2%;
-            max-width: 49.2%;
-            height: 60.5vh;
-            position: relative; 
-            margin-left: 20px;
-            overflow: hidden;
-            margin-top: 20px;
-            border-radius: 6px;
-            z-index: 1;
-            display: inline-block;
-        }
-        #btn {
-            display: block;
-            height: 9vh;
-            width: 100vw;
-            max-width: 20.1vw;
-            margin: 5px;
-            background-color: transparent;
-            border-style: solid;
-            border-width: 1.7px;
-            border-color: black;
-            font-weight: 400;
-            transition: 0.1s;
-            border-radius: 4px;
-            color: black;
-            font-size: 1.4vw;
-        }
-        #btn:hover {
-            border-color: black;
-            color: white;
-            background-color: black;
-            cursor: pointer;
-        }
-        #updatesdiv {
-            align-items: center;
-            background-color: white;
-            height: 60.5vh;
-            width: 20.5%;
-            max-width: 20.5%;
-            text-align: center;
-            margin-left: 20px;
-            margin-top: 20px;
-            border-radius: 6px;
-            display: flex; 
-            flex-direction: column; 
-            justify-content: center;
-            font-size: 1.3vw;
-        }
-        #contact {
-            height: 15%;
-            width: 85%;
-            max-width: 93.1;
-            background-color: white;
-            margin-top: 20px;
-            color: black;
-            text-align: center;
-            padding: 20px;
-            border-radius: 6px;
-        }
-        #span1 {
-            color: black;
-        }
-        #span2 {
-            color: black;
-        }
-        #span3, #updatep, #span4 {
-            color: black;
         }
         #paragraph1{
             margin-left: 50px;
@@ -194,6 +109,22 @@
             width: 0px;
             color: transparent;
         }
+        #contactdiv{
+            width: 88vw;
+            height: auto;
+            background-color: transparent;
+            border-color: black;
+            border-style: solid;
+            border-width: 2px;
+            margin: 20px;
+            padding-left: 40px;
+        }
+        #fb{
+            color: blue;
+        }
+        #ig{
+            color: orange;
+        }
     </style>
 </head>
 <body>
@@ -207,7 +138,6 @@
                 <a id="hrefid" href="https://rigastilauntehnikums.github.io/info/">
                     <button id="homebtn" data-eng="Home" data-lv="Sākums">Home</button>
                 </a>
-                <button id="languagebtn" data-eng="ENG" data-lv="LV">ENG</button>
                 <button id="loginbtn" data-eng="Login" data-lv="Pieteikties">Login</button> 
                 <button id="timetable" data-eng="Timetable" data-lv="Stundas">Timetable</button>
                 <button id="substitution" data-eng="Substitution" data-lv="Aizvietošana">Substitution</button>
@@ -215,42 +145,19 @@
         </div>
     </div>
     <div id="lower">
-        <div class="content-row">
-            <div id="navigation">
-                <a id="hrefid" href="https://rigastilauntehnikums.github.io/info/">
-                    <button id="btn" data-eng="Home page" data-lv="Sākumlapa">Home page</button>
-                </a>
-                <a id="hrefid" href="https://rigastilauntehnikums.github.io/news/">
-                    <button id="btn" data-eng="News" data-lv="Jaunumi">News</button>
-                </a>
-                <button id="btn" data-eng="Timetable" data-lv="Stundas">Timetable</button>
-                <button id="btn" data-eng="Substitution" data-lv="Aizvietošana">Substitution</button>
-                <a href="https://rigastilauntehnikums.github.io/contact/">
-                    <button id="btn" data-eng="Contact" data-lv="Kontakti">Contact</button>
-                </a>
-                <button id="btn" data-eng="Login" data-lv="Pieteikties">Login</button>
-            </div>
-            <div id="youtubevideo">
-                <iframe width="100%" height="100%" 
-                src="https://www.youtube.com/embed/qjJ3ulzH82U?autoplay=1&mute=1&controls=0&loop=1&playlist=qjJ3ulzH82U" 
-                title="YouTube video player" frameborder="0" 
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                allowfullscreen>
-              </iframe>
-            </div>
-            <div id="updatesdiv">
-                <h3 data-eng="Updates" data-lv="Jaunumi">Updates</h3>
-                <p>-V1.4 19.01.2025</p>
-                <p>-V1.3 18.01.2025</p>
-                <p>-V1.2 17.01.2025</p>
-            </div>
-        </div>
-        <div id="contact">
-            <h3 data-eng="Contact Information" data-lv="Kontaktinformācija">Contact Information</h3>
-            <p data-eng="Address: Rīgas Stila un modes tehnikums, Ūdeļu 22, Rīga, Latvia [Your school address]" 
-               data-lv="Adrese: Rīgas Stila un modes tehnikums, Ūdeļu 22, Rīga, Latvija [Jūsu skolas adrese]">
-               Address: <span id="span1">Rīgas Stila un modes tehnikums, Ūdeļu 22, Rīga, Latvia</span> <span id="span2"></span></p>
-            <p data-eng="Tel.: (+12) 34-567-890" data-lv="Tālrunis: (+12) 34-567-890">Tel.: <span id="span3">(+12) 34-567-890 </span></p> 
+        <div id="contactdiv">
+            <h3>Contact</h3>
+            School name:	Rīgas Stila un modes tehnikums<br> <br>
+            School email:	rsmt@rsmt.lv <br> <br>
+            Info email:	rsmt@rsmt.lv <br> <br>
+            School address:	Rīgas Stila un modes tehnikums, Ūdeļu 22, Rīga, Latvia
+            Latvia <br> <br>
+            Telephone:	(+12) 34-567-890 <br><br>
+            <br>
+            <h3>Social media</h3>
+            <span id="fb">Facebook: </span>Rīgas Stila un modes tehnikums <br><br>
+            <span id="ig">Instagram: </span>stilaunmodestehnikums <br><br>
+            Twitter/X: @rsmpv <br><br>
         </div>
     </div>
     <div id="enddiv">
@@ -275,65 +182,5 @@
             <br><br><br><br><br>
         </div>
     </div>
-    <script>
-        document.getElementById('languagebtn').addEventListener('click', function () {
-            let isEnglish = this.innerText === 'ENG';
-            
-            document.querySelectorAll('[data-eng]').forEach(function (element) {
-                if (isEnglish) {
-                    element.textContent = element.getAttribute('data-lv');
-                } else {
-                    element.textContent = element.getAttribute('data-eng');
-                }
-            });
-            
-            updateSpanColors();
-        
-            this.innerText = isEnglish ? 'LV' : 'ENG';
-        });
-        
-        function updateSpanColors() {
-            document.querySelectorAll('span').forEach(function (span) {
-                const color = span.getAttribute('data-color');
-                if (color) {
-                    span.style.color = color;
-                }
-            });
-        }
-        
-        function initializeSpanColors() {
-            document.querySelectorAll('span').forEach(function (span) {
-                if (!span.hasAttribute('data-color')) {
-                    let color = '';
-        
-                    if (span.id === 'span1') {
-                        color = 'black';
-                    } else if (span.id === 'span2') {
-                        color = 'back';
-                    } else if (span.id === 'span3') {
-                        color = 'black';
-                    } else if (span.id === 'span4') {
-                        color = 'black';
-                    }
-        
-                    if (color) {
-                        span.setAttribute('data-color', color);
-                        span.style.color = color; 
-                    }
-                }
-            });
-        }
-        
-        initializeSpanColors();
-
-        window.addEventListener('DOMContentLoaded', function () {
-    if (/Mobi|Android|iPhone|iPod/i.test(navigator.userAgent) && !/iPad/i.test(navigator.userAgent)) {
-        window.location.href = "https://rigastilauntehnikums.github.io/mobile/";
-    }
-});
-
-        </script>
-        
-        
 </body>
 </html>
